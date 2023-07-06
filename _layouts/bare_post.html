@@ -2,8 +2,11 @@
 layout: bare_base
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css" rel="stylesheet">
+
     <div>
-        <img src="/assets/imgs/post_header_img.png" alt="post_logo class=" post_logo">
+        <img src="/assets/imgs/post_header_img.png" alt="post_logo" class="post_logo">
     </div>
 
     <br>
@@ -20,6 +23,10 @@ layout: bare_base
             {%- endif -%}
         </p>
     </header>
+
+    <div class="post-abstract">
+        <span style="color: black; font-style: normal;"><b>Abstract</b>:</span> {{page.abstract}}
+    </div>
 
     <div class="post-content e-content" itemprop="articleBody">
         {{ content }}

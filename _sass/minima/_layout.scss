@@ -225,8 +225,10 @@
 }
 
 .post-meta {
-  font-size: $small-font-size;
-  color: $brand-color;
+  font-family: "Roboto";
+  font-size: $base-font-size;
+  color: black;
+  font-weight: bold;
 }
 
 .post-link {
@@ -234,6 +236,12 @@
   @include relative-font-size(1.5);
 }
 
+.post-abstract {
+  font-family: "Computer Modern Serif";
+  font-style: italic;
+  font-size: $base-font-size;
+  color: gray;
+}
 
 
 /**
@@ -250,10 +258,12 @@
 
 .post-title,
 .post-content h1 {
+  font-family: "Roboto", sans-serif;
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1.15;
   text-align: center;
+  font-weight: bold;
 
   @media screen and (min-width: $on-large) {
     @include relative-font-size(2.625);
@@ -269,7 +279,7 @@
   h4,
   h5,
   h6 {
-    margin-top: $spacing-unit
+    margin-top: $spacing-unit;
   }
 
   h2 {
