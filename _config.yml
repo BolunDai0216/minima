@@ -18,6 +18,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+markdown: kramdown
+highlighter: rouge
+
 # Theme-specific settings
 
 minima:
