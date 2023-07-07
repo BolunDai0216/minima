@@ -5,9 +5,11 @@ layout: bare_base
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css" rel="stylesheet">
 
+    {%- if page.post_header_img -%}
     <div>
-        <img src="/assets/imgs/post_header_img.png" alt="post_logo" class="post_logo">
+        <img src={{page.post_header_img}} alt="post_logo" class="post_logo">
     </div>
+    {%- endif -%}
 
     <br>
 
@@ -31,6 +33,13 @@ layout: bare_base
     <div class="post-content e-content" itemprop="articleBody">
         {{ content }}
     </div>
+
+    {%- if page.pdf_img -%}
+    <div style="margin-left: 5; margin-bottom: 10px; font-weight: bold; color: gray">PDF:</div>
+    <a href="{{page.pdf_link}}">
+        <img src="{{page.pdf_img}}" height="auto" width="100%" style="border: 0.5px solid black">
+    </a>
+    {%- endif -%}
 
     {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
